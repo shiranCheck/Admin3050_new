@@ -23,6 +23,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Security static source code analysis@2019
+  inputs:
+    CheckmarxService: 'Checkmarx 10.32.3.14'
+    projectName: 'shiranCheck.Admin3050_new'
+    preset: 'Checkmarx Default'
+    fullTeamName: 'CxServer'
+    incScan: false
+    vulnerabilityThreshold: false
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
