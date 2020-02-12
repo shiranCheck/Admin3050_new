@@ -1,4 +1,8 @@
 # Starter pipeline
+- task: Security static source code analysis@2019
+  inputs:
+    preset: 'Checkmarx Default'
+    incScan: true
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
