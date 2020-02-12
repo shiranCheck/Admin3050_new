@@ -1,6 +1,12 @@
 # Starter pipeline
 - task: Security static source code analysis@2019
   inputs:
+    CheckmarxService: 'Checkmarx 10.32.3.14'
+    projectName: 'Check Azure DevOps'
+    preset: 'Checkmarx Default'
+    incScan: true
+- task: Security static source code analysis@2019
+  inputs:
     preset: 'Checkmarx Default'
     incScan: true
 - task: DotNetCoreCLI@2
